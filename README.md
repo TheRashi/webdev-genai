@@ -147,31 +147,31 @@ npm run dev
 
 ### Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](Screenshots/login.png)
 
 ---
 
 ### Register Page
 
-![Register Page](screenshots/register.png)
+![Register Page](Screenshots/register.png)
 
 ---
 
 ### Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
 ---
 
 ### Interview Report
 
-![Interview Report](screenshots/report.png)
+![Interview Report](Screenshots/report.png)
 
 ---
 
 ### Resume Generator
 
-![Resume Generator](screenshots/resume-generator.png)
+![Resume Generator](Screenshots/resume-generator.png)
 
 ---
 
