@@ -28,51 +28,102 @@ const Register = () => {
   }
 
   return (
-    <main>
+  <main className="auth-page">
+    <div className="auth-left">
+      <div className="brand">
+       <div className="logo">
+  <div className="logo-icon">✦</div>
+  <h2>InterviewX</h2>
+</div>
+
+        <h1>
+  From Job Description
+  <br />
+  to <span>Job Offer</span>
+</h1>
+
+        <p>
+          AI-powered interview plans, resume analysis, skill-gap detection,
+          personalized questions, and actionable roadmaps to help candidates
+          land their dream roles.
+        </p>
+
+       <div className="features">
+
+  <div className="feature">
+    <h3>🎯 Personalized Interview Plans</h3>
+    <p>Tailored strategies based on your profile and target role</p>
+  </div>
+
+  <div className="feature">
+    <h3>📄 Resume Analysis</h3>
+    <p>Deep insights into strengths and areas for improvement</p>
+  </div>
+
+  <div className="feature">
+    <h3>📈 Skill Gap Detection</h3>
+    <p>Identify and bridge the gap between you and your dream role</p>
+  </div>
+
+  <div className="feature">
+    <h3>💻 Technical & Behavioral Questions</h3>
+    <p>Practice with AI-generated questions matching real interviews</p>
+  </div>
+
+  <div className="feature">
+    <h3>📊 Downloadable Reports</h3>
+    <p>Export your preparation plan and track your progress</p>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div className="auth-right">
       <div className="form-container">
         <h1>Register</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <label htmlFor="username">Username</label>
+            <label>Username</label>
             <input
               onChange={(e) => setUsername(e.target.value)}
               type="text"
-              id="username"
-              name="username"
               placeholder="Enter your username"
             />
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">Email</label>
+            <label>Email</label>
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              id="email"
-              name="email"
               placeholder="Enter your email"
             />
           </div>
 
           <div className="input-group">
-            <label htmlFor="password">Password</label>
+            <label>Password</label>
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
-              id="password"
-              name="password"
               placeholder="Enter your password"
             />
           </div>
 
-          <button className="button primary-button">Register</button>
+          <button className="button primary-button">
+            Register
+          </button>
         </form>
 
-        <p>Already have an account? <Link to="/login">Login</Link></p>
+        <p>
+          Already have an account?
+          <Link to="/login"> Login</Link>
+        </p>
       </div>
-    </main>
-  )
+    </div>
+  </main>
+)
 }
 
 export default Register

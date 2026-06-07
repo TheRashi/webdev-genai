@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { useAuth } from "../../Auth/Hooks/useAuth";
 import "../Style/home.scss"
 
 const InterviewPlanUI = () => {
   const navigate = useNavigate()
+  const { handleLogout } = useAuth()
   const resumeInputRef = useRef(null)
 
   const [jobDescription, setJobDescription] = useState("")
@@ -14,6 +16,15 @@ const InterviewPlanUI = () => {
   const [reports, setReports] = useState([])
 
   const charCount = jobDescription.length
+
+  const logoutUser = async () => {
+  try {
+    await handleLogout()
+    navigate("/login")
+  } catch (error) {
+    console.log("LOGOUT ERROR:", error)
+  }
+}
 
   // FETCH REPORTS
   const fetchReports = async () => {
@@ -121,17 +132,28 @@ const InterviewPlanUI = () => {
   return (
     <main className="home">
       {/* HEADER */}
-      <div className="page-header">
-        <h1>
-          Create Your Custom{" "}
-          <span className="accent">Interview Plan</span>
-        </h1>
+     <div className="page-header">
 
-        <p className="subtitle">
-          Let our AI analyze the job requirements and your profile to build a
-          winning strategy.
-        </p>
-      </div>
+  <div className="header-top">
+    <h1>
+      Create Your Custom{" "}
+      <span className="accent">Interview Plan</span>
+    </h1>
+
+    <button
+      className="logout-btn"
+      onClick={logoutUser}
+    >
+      Logout
+    </button>
+  </div>
+
+  <p className="subtitle">
+    Let our AI analyze the job requirements and your profile to build a
+    winning strategy.
+  </p>
+
+</div>
 
       {/* MAIN CARD */}
       <div className="main-card">
